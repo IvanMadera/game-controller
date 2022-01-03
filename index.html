@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Website</title>
+    <title>Gaming Controller</title>
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/movilstyle.css">
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
@@ -15,7 +17,7 @@
                 <img src="img/logo.png" alt="">
             </figure>
             <nav>
-                <ul>
+                <ul id="menuList">
                     <li><a href="#">Game controllers</a></li>
                     <li><a href="#">VR Accessories</a></li>
                     <li><a href="#">Media Remotes</a></li>
@@ -23,7 +25,7 @@
                 </ul>
             </nav>
             <figure class="menu-icon">
-                <img src="img/menu.png" alt="">
+                <img src="img/menu.png" alt="" onclick="togglemenu()">
             </figure>
         </div>
         <div class="row">
@@ -35,9 +37,41 @@
                 <button type="button"> Buy Now <img src="img/arrow.png" alt=""></button>
             </div>
             <div class="col-2">
-    
+                <figure class="controller">
+                    <img src="img/controller.png" alt="">
+                </figure>
+                <div class="color-box"></div>
+                <a href="#" class="add-btn">
+                    <img src="img/add.png" alt="">
+                    <p><small>Add to cart</small></p>
+                </a>
             </div>
         </div>
+        <section class="social-links">
+            <figure>
+                <img src="img/fb.png" alt="">
+            </figure>
+            <figure>
+                <img src="img/tw.png" alt="">
+            </figure>
+            <figure>
+                <img src="img/ig.png" alt="">
+            </figure>
+        </section>
     </section>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px"
+
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px"){
+                menuList.style.maxHeight = "130px"
+            }
+            else {
+                menuList.style.maxHeight = "0px"
+            }
+        }
+    </script>
 </body>
 </html>
